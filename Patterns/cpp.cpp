@@ -130,6 +130,19 @@ void print9(int n)
   }
 }
 
+void print10(int n)
+{
+  for (int i = 0; i < n; i++)
+  {
+    int start = (i % 2 == 0) ? 0 : 1;
+    for(int j = 0; j < i; j++){
+      cout << start;
+      start = 1 - start;
+    }
+    cout << endl;
+  }
+}
+
 int main()
 {
   int t;
@@ -138,7 +151,7 @@ int main()
   {
     int n;
     cin >> n;
-    print9(n);
+    print10(n);
     cout << endl;
   }
 }
